@@ -20,7 +20,7 @@ def predict():
     # Normalize features using training data mean/std
     features_norm = (features - mean) / std
     z = np.dot(features_norm, w) + b
-    prediction = 1 if (1/(1+np.exp(-z))) >= 0.5 else 0
+    prediction = "Purchased" if (1/(1+np.exp(-z))) >= 0.5 else "Not Purchased"
     return render_template("index.html",prediction_text="The Predicted value is {}".format(prediction))
 
 if __name__ == "__main__":
