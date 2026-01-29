@@ -1,0 +1,37 @@
+body{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230706/pngtree-illustrated-rendering-of-online-shopping-technology-with-ecommerce-add-to-cart-image_3812964.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 500px;
+    margin-right: 150px;
+                }
+.login{
+    color: yellow;
+    }
+h1{
+    margin-left: 60px;
+    }
+input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-bottom: 4px solid black;
+    }
+button{
+    background-color: #4caf54;
+    margin: auto;
+    color:white;
+    padding: 15px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin-left: 70px;
+    }
+
+#predict{
+    margin-left: 60px;
+}

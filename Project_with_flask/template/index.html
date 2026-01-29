@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="login">
+        <h1>Purchase Pradiction Model</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="Age" placeholder="Age" required="Age">
+            <input type="text" name="EstimatedSalary" placeholder="EstimatedSalary" required="EstimatedSalary">
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">predict</button>
+        </form>
+
+        <h1 id="predict">
+            {{ prediction_text}}
+        </h1>
+    </div>
+</body>
+</html>
+
