@@ -9,7 +9,7 @@ w, b = pickle.load(open("logistic_regression.pkl","rb"))
 mean = np.array([3.5593750e+01, 7.0228125e+04])
 std = np.array([1.01170011e+01, 3.46007743e+04])
 
-@flask_app.route("/")
+@flask_app.route("/") 
 def Home():
     return render_template("index.html")
 
