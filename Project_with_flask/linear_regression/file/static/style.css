@@ -6,20 +6,34 @@ body{
     margin-left: 800px;
     margin-right: 150px;
 }
+
 input{
     width: 70%;
     padding: 12px 10px;
     margin-bottom: 12px;
-    
 }
+
 h1{
     text-align: left;
 }
+
 button{
     background-color:#F2C464;
     
-    padding: 5px 15px;
+    padding: 7px 19px;
     display: table-row;
-    
     margin-left: 250px;
+}
+
+.output{
+    margin-top: 50px;     
+    margin-bottom: 30px;
+    margin-left: 20px;
+    
+}
+
+.bottom-text{
+    margin-top: 15px;     
+    margin-bottom: 10px;
+    font-size: 19px;
 }

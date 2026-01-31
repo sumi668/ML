@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML API</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 
 
 </head>
@@ -13,7 +13,7 @@
         <h1>
             StudentPerformance Model
         </h1>
-        <form action="{{url_for ('performance')}}" method="post">
+        <form action="{{url_for ('performance')}}" method="POST">
     
         <input type="number" name="Previous Scores" placeholder="Previous Scores" required>
         <input type="number" name="Hours Studied" placeholder="Hours Studied"  required >
@@ -22,8 +22,12 @@
 
         <button type="submit" class="btn btn-primary btn-block btn-large">submit</button>
         </form>
-
-        <h1 id="performance"> {{performance_text}}</h1>
+        <h1 class="output">{{performance_text}}</h1>
+        <p class="bottom-text">
+            Prediction is based on the values you entered above.
+        </p>
     </div>
+    
+    
 </body>
 </html>
