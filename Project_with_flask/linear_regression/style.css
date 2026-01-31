@@ -1,0 +1,25 @@
+body{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/272/094/original/happy-women-student-gratuated-from-education-background-concept-free-vector.jpg);
+    background-image: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 800px;
+    margin-right: 150px;
+}
+input{
+    width: 70%;
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    
+}
+h1{
+    text-align: left;
+}
+button{
+    background-color:#F2C464;
+    
+    padding: 5px 15px;
+    display: table-row;
+    
+    margin-left: 250px;
+}

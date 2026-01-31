@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="login">
+        <h1>
+            StudentPerformance Model
+        </h1>
+        <form action="{{url_for ('performance')}}" method="post">
+    
+        <input type="number" name="Previous Scores" placeholder="Previous Scores" required>
+        <input type="number" name="Hours Studied" placeholder="Hours Studied"  required >
+        <input type="number" name="Sleep Hours" placeholder="Sleep Hours" required >
+        <input type="number" name="Sample Question Papers Practiced" placeholder="Question Papers Practiced required" required>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">submit</button>
+        </form>
+
+        <h1 id="performance"> {{performance_text}}</h1>
+    </div>
+</body>
+</html>
