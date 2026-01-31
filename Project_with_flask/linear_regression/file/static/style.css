@@ -1,41 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
 body{
-    background-image: url(https://static.vecteezy.com/system/resources/previews/002/272/094/original/happy-women-student-gratuated-from-education-background-concept-free-vector.jpg);
-    background-image: no-repeat;
+    min-height: 100vh;
+    background:
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.4)),
+        url("https://static.vecteezy.com/system/resources/previews/002/272/094/original/happy-women-student-gratuated-from-education-background-concept-free-vector.jpg");
     background-size: cover;
-    margin-top: 50px;
-    margin-left: 800px;
-    margin-right: 150px;
+    background-position: center;
+}
+
+/* Page layout */
+.page{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 100vh;
+    padding: 60px;
+    gap: 60px;
+}
+
+/* Left section */
+.left{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h1{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left h1 span{
+    color: #F2C464;
+}
+
+.left p{
+    font-size: 16px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Right section */
+.right{
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form */
+.field{
+    margin-bottom: 18px;
+}
+
+label{
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
 }
 
 input{
-    width: 70%;
-    padding: 12px 10px;
-    margin-bottom: 12px;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-h1{
-    text-align: left;
+input:focus{
+    outline: none;
+    border-color: #F2C464;
+    box-shadow: 0 0 0 2px rgba(242,196,100,0.25);
 }
 
+/* Button */
 button{
-    background-color:#F2C464;
-    
-    padding: 7px 19px;
-    display: table-row;
-    margin-left: 250px;
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #111;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
-.output{
-    margin-top: 50px;     
-    margin-bottom: 30px;
-    margin-left: 20px;
-    
+button:hover{
+    background: #F2C464;
+    color: #000;
 }
 
-.bottom-text{
-    margin-top: 15px;     
-    margin-bottom: 10px;
-    font-size: 19px;
-    padding-left: 15px;
-    
+/* Result */
+.result{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.result span{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.result h2{
+    margin-top: 8px;
+    font-size: 28px;
+    color: #F2C464;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .page{
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
 }

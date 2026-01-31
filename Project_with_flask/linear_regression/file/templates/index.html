@@ -3,31 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML API</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
-
-
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="login">
-        <h1>
-            StudentPerformance Model
-        </h1>
-        <form action="{{url_for ('performance')}}" method="POST">
-    
-        <input type="number" name="Previous Scores" placeholder="Previous Scores" required>
-        <input type="number" name="Hours Studied" placeholder="Hours Studied"  required >
-        <input type="number" name="Sleep Hours" placeholder="Sleep Hours" required >
-        <input type="number" name="Sample Question Papers Practiced" placeholder="Question Papers Practiced required" required>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">submit</button>
-        </form>
-        <h1 class="output">{{performance}}</h1>
-        <p class="bottom-text">
-            Prediction is based on the values you entered above.
+<body>
+
+<div class="page">
+    <div class="left">
+        <h1>Student Performance<br><span>Prediction System</span></h1>
+        <p>
+            This machine learning model predicts a student's expected performance
+            based on study habits, sleep patterns, and practice consistency.
         </p>
     </div>
-    
-    
+
+    <div class="right">
+        <form action="{{ url_for('performance') }}" method="POST">
+
+            <div class="field">
+                <label>Previous Score</label>
+                <input type="number" name="Previous Scores" required>
+            </div>
+
+            <div class="field">
+                <label>Hours Studied (per day)</label>
+                <input type="number" name="Hours Studied" required>
+            </div>
+
+            <div class="field">
+                <label>Sleep Hours</label>
+                <input type="number" name="Sleep Hours" required>
+            </div>
+
+            <div class="field">
+                <label>Question Papers Practiced</label>
+                <input type="number" name="Sample Question Papers Practiced" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if performance %}
+        <div class="result">
+            <span>Student's Performance</span>
+            <h2>{{ performance }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
 </body>
 </html>

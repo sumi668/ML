@@ -26,7 +26,7 @@ def performance():
     features_norm= (features-mean)/std
     performance = float(np.dot(features_norm,w)+b)
     print("Performance:", performance)
-    return render_template("index.html", performance="StudentPerformance: {:.2f}".format(performance))
+    return render_template("index.html", performance="{:.2f}".format(performance))
 
 if __name__=="__main__":
     flask_app.run(debug=True)
